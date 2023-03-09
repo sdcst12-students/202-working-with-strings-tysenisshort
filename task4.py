@@ -4,18 +4,24 @@
 Strings are iterable.  Use for loops to iterate through both strings to create a list to represent a deck of cards. Note: We can also use list comprehension as strings are still iterable!
 """
 
-ranks = "A23456789TJQK"
+cards = "A23456789TJQK"
 suits = "CDHS"
 
 def createDeck():
-  return 
+  
+  card=[f"{i}{j}" for i in ranks for j in suits]
+  
+  
+  
+  
+  return card
 
 def main():
-  deck = createDeck()
-  print(deck)
-  assert "AS" in deck
-  assert "KC" in deck
-  assert deck.count("TC") == 1
+  deckcards = createDeck()
+  print(deckcards)
+  assert "AS" in deckcards
+  assert "KC" in deckcards
+  assert deckcards.count("TC") == 1
 
 
 if __name__ == "__main__":
